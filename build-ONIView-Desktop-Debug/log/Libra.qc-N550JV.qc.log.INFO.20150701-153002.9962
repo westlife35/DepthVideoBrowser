@@ -1,0 +1,20 @@
+Log file created at: 2015/07/01 15:30:02
+Running on machine: qc-N550JV
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0701 15:30:02.379673  9962 primesense_sensor.cpp:34] After initialization: 
+*** Aborted at 1435735815 (unix time) try "date -d @1435735815" if you are using GNU date ***
+PC: @     0x7f2d7d26c12d (unknown)
+*** SIGTERM (@0x3e800000bb6) received by PID 9984 (TID 0x7f2d80087e40) from PID 2998; stack trace: ***
+    @     0x7f2d7d1b5d40 (unknown)
+    @     0x7f2d7d26c12d (unknown)
+    @     0x7f2d7a855fe4 (unknown)
+    @     0x7f2d7a8560ec (unknown)
+    @     0x7f2d7df0e7a1 (unknown)
+    @     0x7f2d7e4b4bb6 (unknown)
+    @     0x7f2d7dee00af (unknown)
+    @     0x7f2d7dee03a5 (unknown)
+    @     0x7f2d7dee5b79 (unknown)
+    @           0x40929a main
+    @     0x7f2d7d1a0ec5 (unknown)
+    @           0x409169 (unknown)
+    @                0x0 (unknown)

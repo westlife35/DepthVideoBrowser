@@ -1,0 +1,90 @@
+/*
+ * prime_sensor_test.cpp
+ *
+ *  Created on: Mar 5, 2015
+ *      Author: chenzhen
+ */
+
+#include <fcntl.h>
+#include <iostream>
+#include "glog/logging.h"
+#include "sensor.h"
+#include "depth_sensor.h"
+#include "primesense_sensor.h"
+
+using namespace std;
+using namespace dg_devices;
+
+int main() {
+
+	fcntl(0, F_SETFL, O_NONBLOCK);
+
+	SensorManager::Instance()->RegisterSensor("Primesense1",
+			new Primesense(
+					"/home/qc/Downloads/queue_2.oni"));
+	SensorManager::Instance()->Start();
+
+	DepthSensor *sensor1 =
+			(DepthSensor *) SensorManager::Instance()->FindSensor(
+					"Primesense1");
+	if (sensor1 == NULL) {
+		LOG(ERROR)<< "Could not find Sensor Primesense1" << endl;
+		return -1;
+	}
+
+	void **data = NULL;
+	unsigned char *rgb = NULL;
+	unsigned short *depth = NULL;
+
+	map<string, float> prop;
+
+	while (1) {
+
+		SensorManager::Instance()->Update();
+		char input = getchar();
+		if (input == '1') {
+			cout << "Resulotion:" << sensor1->GetDepthWidth() << "*"
+					<< sensor1->GetDepthHeight() << " "
+					<< sensor1->GetColorWidth() << "*"
+					<< sensor1->GetColorHeight() << endl;
+		} else if (input == '2') {
+			cout << "Sensor Name: " << sensor1->GetSensorName() << endl;
+		} else if (input == '3') {
+			cout << "Sensor URI: " << sensor1->GetSensorURI() << endl;
+		} else if (input == '4') {
+			sensor1->GetSensorProperties(prop);
+			cout << "Sensor Properties: " << endl;
+			map<string, float>::iterator itr = prop.begin();
+			while (itr != prop.end()) {
+				cout << itr->first << ":" << itr->second << endl;
+				itr++;
+			}
+		} else if (input == '5') {
+			if (sensor1->IsRecording()) {
+				cout << "This sensor is recording now." << endl;
+			} else {
+				sensor1->StartRecording("recordingdata.oni", false);
+			}
+		} else if (input == '6') {
+			if (!sensor1->IsRecording()) {
+				cout << "This sensor is not recording now." << endl;
+			} else {
+				sensor1->StopRecording();
+			}
+		} else if (input == '7') {
+			float x, y, z;
+			sensor1->ConvertDepthToWorld(100, 100, 100, &x, &y, &z);
+			cout << "Convert from (100,100,100) to (" << x << "," << y << ","
+					<< z << ")" << endl;
+		} else if (input == '0') {
+			printf("OUT: %8d\n", sensor1->GetDepthData()[153920]);
+
+		} else {
+		}
+
+	}
+
+	return 0;
+
+}
+
