@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<opencv_storage>
+<total_frame>8212</total_frame>
+<event>
+  <_><event_type>fall</event_type>
+    <event_time>
+      125 156 282 336</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      387 411 524 542</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      770 816 1527 1557</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      1658 1703 2107 2144</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      2316 2338 2996 3036</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      3232 3252 3949 3971</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      4190 4220 4792 4830</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      4910 4939 5351 5379</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      5502 5553 6373 6413</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      6549 6638 7331 7358</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      7489 7502 7662 7704</event_time></_>
+  <_><event_type>fall</event_type>
+    <event_time>
+      7850 7872 8057 8084</event_time></_></event>
+</opencv_storage>
