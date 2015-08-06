@@ -1,0 +1,4 @@
+Log file created at: 2015/07/01 15:31:39
+Running on machine: qc-N550JV
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0701 15:31:39.991713 10052 primesense_sensor.cpp:34] After initialization: 

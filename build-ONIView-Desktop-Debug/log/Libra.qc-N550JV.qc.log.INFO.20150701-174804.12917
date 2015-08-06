@@ -1,0 +1,17 @@
+Log file created at: 2015/07/01 17:48:04
+Running on machine: qc-N550JV
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0701 17:48:04.863596 12917 primesense_sensor.cpp:34] After initialization: 
+I0701 17:48:04.869838 12917 primesense_sensor.cpp:60] Primesense Info: 
+  name: oni File
+  vendor: PrimeSense, Ltd.
+  vendor ID: 0
+  Uri: /home/qc/Downloads/1.oni
+  USB Product ID: 0 
+
+I0701 17:48:04.871829 12917 primesense_sensor.cpp:99] Color resolution: 640*480
+I0701 17:48:04.871901 12917 primesense_sensor.cpp:100] Depth resolution: 640*480
+I0701 17:48:04.871978 12917 primesense_sensor.cpp:121] Primesense is successfully initialized.
+I0701 17:48:04.872045 12917 primesense_sensor.cpp:147] Depth to color registration is not supported by this device.
+I0701 17:48:04.872104 12917 primesense_sensor.cpp:150] Primesense is started with both color and depth stream.
+I0701 17:48:37.925434 12917 primesense_sensor.cpp:198] Primesense is successfully shut down.

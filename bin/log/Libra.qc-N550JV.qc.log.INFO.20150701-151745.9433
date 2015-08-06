@@ -1,0 +1,56 @@
+Log file created at: 2015/07/01 15:17:45
+Running on machine: qc-N550JV
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0701 15:17:45.482851  9433 primesense_sensor.cpp:34] After initialization: 
+*** Aborted at 1435735092 (unix time) try "date -d @1435735092" if you are using GNU date ***
+PC: @           0x40f41b dg_controls::ONICapture::Update()
+*** SIGSEGV (@0x20) received by PID 9433 (TID 0x7f4e1c077e40) from PID 32; stack trace: ***
+    @     0x7f4e191a5d40 (unknown)
+    @           0x40f41b dg_controls::ONICapture::Update()
+    @           0x40a22a ONIViewDialog::updateImageForFile()
+    @           0x44a5fd ONIViewDialog::qt_static_metacall()
+    @     0x7f4e19ee587a (unknown)
+    @     0x7f4e19ee9a31 (unknown)
+    @     0x7f4e1a402e2c (unknown)
+    @     0x7f4e1a4094a0 (unknown)
+    @     0x7f4e19ed14dd (unknown)
+    @     0x7f4e19f01323 (unknown)
+    @     0x7f4e19efe629 (unknown)
+    @     0x7f4e16845e04 (unknown)
+    @     0x7f4e16846048 (unknown)
+    @     0x7f4e168460ec (unknown)
+    @     0x7f4e19efe7a1 (unknown)
+    @     0x7f4e1a4a4bb6 (unknown)
+    @     0x7f4e19ed00af (unknown)
+    @     0x7f4e19ed03a5 (unknown)
+    @     0x7f4e19ed5b79 (unknown)
+    @           0x409560 main
+    @     0x7f4e19190ec5 (unknown)
+    @           0x40a108 (unknown)
+    @                0x0 (unknown)
+I0701 15:17:45.483142  9433 primesense_sensor.cpp:60] Primesense Info: 
+  name: oni File
+  vendor: PrimeSense, Ltd.
+  vendor ID: 0
+  Uri: /home/qc/Downloads/1.oni
+  USB Product ID: 0 
+
+I0701 15:17:45.483192  9433 primesense_sensor.cpp:99] Color resolution: 640*480
+I0701 15:17:45.483197  9433 primesense_sensor.cpp:100] Depth resolution: 640*480
+I0701 15:17:45.483199  9433 primesense_sensor.cpp:121] Primesense is successfully initialized.
+I0701 15:17:45.483213  9433 primesense_sensor.cpp:147] Depth to color registration is not supported by this device.
+I0701 15:17:45.483217  9433 primesense_sensor.cpp:150] Primesense is started with both color and depth stream.
+I0701 15:18:10.579733  9433 primesense_sensor.cpp:198] Primesense is successfully shut down.
+I0701 15:18:12.731268  9433 primesense_sensor.cpp:34] After initialization: 
+I0701 15:18:12.731552  9433 primesense_sensor.cpp:60] Primesense Info: 
+  name: oni File
+  vendor: PrimeSense, Ltd.
+  vendor ID: 0
+  Uri: /home/qc/Downloads/1.oni
+  USB Product ID: 0 
+
+I0701 15:18:12.731578  9433 primesense_sensor.cpp:99] Color resolution: 640*480
+I0701 15:18:12.731582  9433 primesense_sensor.cpp:100] Depth resolution: 640*480
+I0701 15:18:12.731585  9433 primesense_sensor.cpp:121] Primesense is successfully initialized.
+I0701 15:18:12.731588  9433 primesense_sensor.cpp:147] Depth to color registration is not supported by this device.
+I0701 15:18:12.731590  9433 primesense_sensor.cpp:150] Primesense is started with both color and depth stream.

@@ -1,0 +1,18 @@
+CC = g++
+LIB =-L./../CamLevel/lib -ldevice -L./../CamLevel/lib/OpenNI2/Linux-x86_64 -lOpenNI2 -lglog -lglut -lGL#-lglut -lGL#-L/home/qc/workspace/OpenNI2/Bin/x64-Release/OpenNI2/Drivers -lDummyDevice -lPS1080
+INC =-I./../CamLevel/include/OpenNI2 -I./../CamLevel/include
+
+prime_sensor_test: prime_sensor_test.o
+	$(CC) prime_sensor_test.o -o prime_sensor_test -Xlinker -rpath ./../CamLevel/lib   $(LIB) 
+prime_sensor_test.o:prime_sensor_test.cpp
+	$(CC) -c prime_sensor_test.cpp $(INC)
+
+
+
+
+clean:
+	@echo "cleanning project"
+	rm -rf *.o prime_sensor_test
+	@echo "clean completed"
+
+.PHONY:clean
